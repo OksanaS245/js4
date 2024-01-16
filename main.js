@@ -7,8 +7,8 @@ console.log (result);
 
 //task 2
 function min (a, b) {
-    if (a > b) {console.log (a)} 
-    else {console.log (b)} 
+    if (a > b) {return a} 
+    else {return b} 
 };
 min (5, 4)
 
