@@ -20,8 +20,8 @@ pow (2, 3);
 
 //task 4
 function numb (n) {
-    if (n % 2 == 0) {console.log (`Число ${n} - четное`)}
-    else {console.log (`Число ${n} - не четное`)}
+    if (n % 2 == 0) {return `Число ${n} - четное`)}
+    else {return (`Число ${n} - не четное`)}
 };
 
 numb (3);
@@ -37,9 +37,9 @@ function rgbToHex (r, g, b) {
     g = typeof g === 'undefined' ? 0 : g;
     b = typeof b === 'undefined' ? 0 : b;
 
-    const hex1 = componentToHex(r); //задаем переменную и вызываем функцию componentToHex, где r - аргумент для componentToHex, но параметр для rgbToHex
-    const hex2 = componentToHex(g);
-    const hex3 = componentToHex(b);
+    const hex1 = componentToHex (r); //задаем переменную и вызываем функцию componentToHex, где r - аргумент для componentToHex, но параметр для rgbToHex
+    const hex2 = componentToHex (g);
+    const hex3 = componentToHex (b);
 
     return `#${hex1}${hex2}${hex3}`; //возвращаем значение заданных прежде переменных
 }
@@ -52,16 +52,15 @@ function squareNumber (num) {
     let b = num ** 2;
     return b;
     }
-    let firsFunc = squareNumber (25);
-console.log (firsFunc);
-
+  
 function secondFunc (a) {
+    try {
     if (a >= 18 && a <= 50) {
-        const c = squareNumber (a);
-        return c;
+       return squareNumber (a);
     } else {throw new Error ('incorrect number')}
+}
+    catch (error) {return error.message}
 };
-let d = secondFunc (20);
-console.log (d);
+console.log (secondFunc (20));
 
 
