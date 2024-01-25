@@ -1,16 +1,16 @@
 //task 1
 function sum (x, y) {
-    return x + y
+    return x + y;
 }
 let result = sum (10, 6);
 console.log (result);
 
 //task 2
 function min (a, b) {
-    if (a > b) {return a} 
-    else {return b} 
-};
-min (5, 4)
+    if (a > b) {return a;}
+    else {return b;} 
+}
+console.log (min(5, 4));
 
 //task 3
 function pow (x, n) {
@@ -20,11 +20,10 @@ pow (2, 3);
 
 //task 4
 function numb (n) {
-    if (n % 2 == 0) {return `Число ${n} - четное`)}
-    else {return (`Число ${n} - не четное`)}
-};
-
-numb (3);
+    if (n % 2 == 0) {return `Число ${n} - четное`;}
+    else {return (`Число ${n} - не четное`);}
+}
+console.log(numb(3));
 
 //task 5
 function componentToHex (colorNumber) {
@@ -32,11 +31,8 @@ function componentToHex (colorNumber) {
     return hex.length == 1 ? '0' + hex : hex ;
 }
 
-function rgbToHex (r, g, b) {
-    r = typeof r === 'undefined' ? 0 : r;
-    g = typeof g === 'undefined' ? 0 : g;
-    b = typeof b === 'undefined' ? 0 : b;
-
+function rgbToHex (r = 0, g = 0, b = 0) { //задать значения по умолчанию
+    
     const hex1 = componentToHex (r); //задаем переменную и вызываем функцию componentToHex, где r - аргумент для componentToHex, но параметр для rgbToHex
     const hex2 = componentToHex (g);
     const hex3 = componentToHex (b);
@@ -57,10 +53,10 @@ function secondFunc (a) {
     try {
     if (a >= 18 && a <= 50) {
        return squareNumber (a);
-    } else {throw new Error ('incorrect number')}
+    } else {throw new Error ('incorrect number');}
 }
-    catch (error) {return error.message}
-};
+    catch (error) {return error.message;}
+}
 console.log (secondFunc (20));
 
 
